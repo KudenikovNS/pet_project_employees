@@ -5,32 +5,32 @@ export const employeesApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllEmpoyees: builder.query<Employee[], void>({
       query: () => ({
-        url: "/emloyees",
+        url: "/employees",
         method: "GET",
       }),
     }),
     getEmpoyee: builder.query<Employee, string>({
       query: (id) => ({
-        url: `/emloyees/${id}`,
+        url: `/employees/${id}`,
         method: "GET",
       }),
     }),
     editEmpoyee: builder.mutation<string, Employee>({
       query: (employee) => ({
-        url: `/emloyees/edit/${employee.id}`,
+        url: `/employees/edit/${employee.id}`,
         method: "PUT",
       }),
     }),
     removeEmpoyee: builder.mutation<string, string>({
       query: (id) => ({
-        url: `/emloyees/remove/${id}`,
+        url: `/employees/remove/${id}`,
         method: "POST",
         body: { id },
       }),
     }),
     addEmpoyee: builder.mutation<Employee, Employee>({
       query: (employee) => ({
-        url: `/emloyees/add/`,
+        url: `/employees/add/`,
         method: "POST",
         body: { employee },
       }),

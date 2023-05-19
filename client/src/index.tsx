@@ -1,20 +1,25 @@
 import React from 'react';
-import { ConfigProvider, theme } from 'antd'
 import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { store } from './app/store';
+import { Provider } from 'react-redux';
+import { ConfigProvider, theme } from 'antd'
 import reportWebVitals from './reportWebVitals';
+
+import { store } from './app/store';
 import { Paths } from './paths';
+import { Auth } from './features/auth/auth';
+
+
 import { Login } from './pages/login';
 import { Register } from './pages/register';
+import { Employees } from './pages/employees';
+
 import './index.css';
-import { Auth } from './features/auth/auth';
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>Emploeeys</h1>
+    element: <Employees />
   },
   {
     path: Paths.login,
