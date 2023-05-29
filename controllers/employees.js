@@ -13,7 +13,7 @@ const add = async (req, res) => {
   try {
     const data = req.body;
 
-    if (!data.firstName || !data.lastName || !data.age || !data.adress) {
+    if (!data.firstName || !data.lastName || !data.age || !data.address) {
       return res.status(400).json({ message: "Все поля обязательны" });
     }
 

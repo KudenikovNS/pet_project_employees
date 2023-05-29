@@ -24,8 +24,8 @@ const colums: ColumnsType<Employee> = [
   },
   {
     title: "Адрес",
-    dataIndex: 'adress',
-    key: 'adress'
+    dataIndex: 'address',
+    key: 'address'
   },
 ]
 
@@ -41,9 +41,11 @@ export const Employees = () => {
     }
   }, [navigate, user])
 
+  const goToAddUser = () => navigate(Paths.employeeAdd)
+
   return (
     <Layout>
-      <CustomButton type='primary' onClick={() => null} icon={<PlusCircleOutlined />}>
+      <CustomButton type='primary' onClick={goToAddUser} icon={<PlusCircleOutlined />}>
         Добавить
       </CustomButton>
       <Table
