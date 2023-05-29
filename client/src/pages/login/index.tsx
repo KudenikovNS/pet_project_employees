@@ -22,7 +22,6 @@ export const Login = () => {
       await loginUser(data).unwrap();
       navigate('/')
     } catch (err) {
-      console.log('err', err)
       const maybeError = isErrorWithMessage(err);
 
       if (maybeError) {
