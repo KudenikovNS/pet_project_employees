@@ -52,7 +52,6 @@ export const Employee = () => {
       } else {
         setError('Неизвестная ошибка')
       }
-
     }
   }
 

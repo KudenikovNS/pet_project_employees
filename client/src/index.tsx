@@ -9,13 +9,13 @@ import { store } from './app/store';
 import { Paths } from './paths';
 import { Auth } from './features/auth/auth';
 
-
 import { Login } from './pages/login';
 import { Register } from './pages/register';
 import { Employees } from './pages/employees';
 import { AddEmployee } from './pages/add-employee';
 import { Status } from './pages/status';
 import { Employee } from './pages/employee';
+import { EditEmployee } from './pages/edit-employee';
 
 import './index.css';
 
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.employee}/:id`,
     element: <Employee />
+  },
+  {
+    path: `${Paths.employeeEdit}/:id`,
+    element: <EditEmployee />
   },
 ])
 
